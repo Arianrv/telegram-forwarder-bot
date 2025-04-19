@@ -21,22 +21,25 @@ Built using Telethon and designed for simplicity, reliability, and 24/7 operatio
 ## Setup
 
 1. Clone or download this repository manually.
+   ```bash
+   git clone https://github.com/Arianrv/telegram-forwarder-bot.git
+   cd telegram-forwarder-bot
 
-2. Create a virtual environment (optional but recommended):
+3. Create a virtual environment (optional but recommended):
    ```bash
    python3 -m venv venv
    source venv/bin/activate
 
-3. Install required libraries from requirements.txt:
+4. Install required libraries from requirements.txt:
    ```bash
    pip install -r requirements.txt
 
-4. Create a apiprivate.env file in the root folder with this format:
+5. Create a apiprivate.env file in the root folder with this format:
    ```bash
    api_id=YOUR_API_ID
    api_hash=YOUR_API_HASH
    target_group_id=YOUR_TARGET_GROUP_ID     # (e.g. -100123456789)
 
-5. Run the bot:
+6. Run the bot:
    ```bash
    python forward.py
