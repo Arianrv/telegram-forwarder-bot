@@ -1,3 +1,10 @@
+'''
+    by Arianrv
+    instagram: @barsarnj
+    email: arianrv@gmail.com
+'''
+
+
 import asyncio
 from telethon import TelegramClient, events
 from dotenv import load_dotenv
