@@ -4,18 +4,18 @@ from dotenv import load_dotenv
 import os
 
 
-# ---------------- CONFIGURATION ----------------
+# ------------------------------- CONFIGURATION -------------------------------
 load_dotenv("apiprivate.env")
 api_id = int(os.getenv('api_id'))
 api_hash = os.getenv('api_hash')
 session_name = 'forwarder_bot'
 target_group_id = int(os.getenv('target_group_id'))
 
-# ---------------- CLIENT SETUP ----------------
+# ------------------------------- CLIENT SETUP --------------------------------
 client = TelegramClient(session_name, api_id, api_hash)
 
 
-# ---------------- HANDLERS ----------------
+# ------------------------------- HANDLERS ------------------------------------
 @client.on(events.NewMessage(incoming=True))
 async def forward_private_messages(event):
     if event.is_private:  # Only handle private chats
@@ -30,7 +30,7 @@ async def forward_private_messages(event):
             print(f"Failed to forward message: {e}")
 
 
-# ---------------- MAIN ----------------
+# ------------------------------- MAIN ----------------------------------------
 async def main():
     print("Bot is running and listening for private messages...")
     await client.start()
